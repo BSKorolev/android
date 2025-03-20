@@ -21,8 +21,8 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             checkAuthState()
         }, 1000)
-        //val sharedPref = getSharedPreferences("user_data", Context.MODE_PRIVATE)
-        //sharedPref.edit().clear().apply()
+        val sharedPref = getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        sharedPref.edit().clear().apply()
     }
 
     private fun checkAuthState() {
